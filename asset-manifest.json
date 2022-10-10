@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/www.jchagm.org/static/css/main.5fae973e.css",
-    "main.js": "/www.jchagm.org/static/js/main.78d86d34.js",
-    "static/js/787.2ea513bc.chunk.js": "/www.jchagm.org/static/js/787.2ea513bc.chunk.js",
-    "static/media/hope.jpg": "/www.jchagm.org/static/media/hope.b2cb571a73bc232189ff.jpg",
-    "static/media/youth.jfif": "/www.jchagm.org/static/media/youth.1747196287faa1afe3ba.jfif",
-    "index.html": "/www.jchagm.org/index.html",
-    "main.5fae973e.css.map": "/www.jchagm.org/static/css/main.5fae973e.css.map",
-    "main.78d86d34.js.map": "/www.jchagm.org/static/js/main.78d86d34.js.map",
-    "787.2ea513bc.chunk.js.map": "/www.jchagm.org/static/js/787.2ea513bc.chunk.js.map"
+    "main.css": "/static/css/main.94159a29.css",
+    "main.js": "/static/js/main.cfb6fc5d.js",
+    "static/js/787.2ea513bc.chunk.js": "/static/js/787.2ea513bc.chunk.js",
+    "static/media/hope.jpg": "/static/media/hope.b2cb571a73bc232189ff.jpg",
+    "static/media/youth.jfif": "/static/media/youth.1747196287faa1afe3ba.jfif",
+    "index.html": "/index.html",
+    "main.94159a29.css.map": "/static/css/main.94159a29.css.map",
+    "main.cfb6fc5d.js.map": "/static/js/main.cfb6fc5d.js.map",
+    "787.2ea513bc.chunk.js.map": "/static/js/787.2ea513bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5fae973e.css",
-    "static/js/main.78d86d34.js"
+    "static/css/main.94159a29.css",
+    "static/js/main.cfb6fc5d.js"
   ]
 }
