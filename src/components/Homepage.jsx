@@ -4,10 +4,7 @@ import { BiTime } from "react-icons/bi";
 const Homepage = () => {
   return (
     <div className="flex flex-col w-auto h-auto" id="container">
-      <div
-        id="hero"
-        className="w-fit h-screen bg-hero bg-cover flex flex-col"
-      >
+      <div id="hero" className="w-fit h-screen bg-hero bg-cover flex flex-col">
         <div
           id="navbar"
           className="flex flex-row text-white justify-between px-10 py-7 font-bold"
@@ -38,7 +35,10 @@ const Homepage = () => {
       </div>
       <div className="w-auto h-auto bg-white flex flex-col">
         <div className="pt-20">
-          <span className="text-black font-bold text-6xl text-opacity-90"> JOIN US </span>
+          <span className="text-black font-bold text-6xl text-opacity-90">
+            {" "}
+            JOIN US{" "}
+          </span>
           <div className="flex justify-between pt-20 pb-32 px-72">
             <div className="flex flex-col text-sm justify-center items-center">
               <BiTime size={50} />
@@ -114,6 +114,20 @@ const Homepage = () => {
             </span>
           </div>
         </div>
+      </div>
+      <div className="flex bg-black h-auto py-40 gap-10 justify-center items-center flex-col">
+        <span className="text-white text-3xl font-bold">GIVE</span>
+        <span className="text-white text-xl font-bold text-opacity-90 border -4 border-white py-2 px-4">
+          FIND OUT MORE
+        </span>
+      </div>
+      <div className="flex bg-white  h-auto py-40 gap-10 justify-center items-center flex-col">
+        <span className="text-black text-3xl font-bold">FOLLOW US </span>
+        <span className="text-black">FACEBOOK </span>
+
+        <span className="text-black text-xl font-bold text-opacity-90 border-2 border-black py-2 px-4">
+          @JESUS CHRIST HOPE OFF ALL GENERATIONS, INC. MINISTRY
+        </span>
       </div>
     </div>
   );
