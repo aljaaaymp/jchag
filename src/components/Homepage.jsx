@@ -1,33 +1,55 @@
 import React from 'react'
 import { BiTime } from "react-icons/bi";
+import { AiOutlineBars } from "react-icons/ai";
+import { useState } from 'react';
 
-const Homepage = () => {
+function Homepage() {
+    const [navbarOpen, setNavbarOpen] = useState(false);
+
   return (
     <div className="flex flex-col w-auto h-auto" id="container">
       <div id="hero" className="w-fit h-screen bg-hero bg-cover flex flex-col">
         <div
           id="navbar"
-          className="flex flex-row text-white justify-between px-10 py-7 font-bold"
+          className="flex flex-col md:flex-row text-white justify-start md:justify-between px-10 py-7 font-bold"
         >
           <span className="text-3xl"> JCHAGM. </span>
-          <div className="flex gap-11">
-            <span> WATCH </span>
-            <span> ABOUT </span>
-            <span> OUTREACH </span>
-            <span> GIVE </span>
+          <button
+            className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+            onClick={() => setNavbarOpen(!navbarOpen)}
+          >
+            <i className="fas fa-bars">
+              <AiOutlineBars className='text-white'/>
+            </i>
+          </button>
+          <div
+            className={
+              "md:flex  flex-col md:flex-row items-start md:items-center justify-center  pr-8 md:pr-0" +
+              (navbarOpen ? " flex" : " hidden")
+            }
+            id="example-navbar-danger"
+          >
+            <div/>
+            <div className="flex gap-11 flex-col md:flex-row">
+              <span> WATCH </span>
+              <span> ABOUT </span>
+              <span> OUTREACH </span>
+              <span> GIVE </span>
+            </div>
           </div>
         </div>
-        <div className="pt-10 flex flex-col w-1/2">
-          <span className="text-white text-6xl font-bold">
+        <div className="pt-10 flex flex-col px-20 md:w-1/2">
+          <span className="text-white text-3xl md:text-6xl font-bold">
             THE PERFECT PLACE FOR IMPERFECT PEOPLE
           </span>
-          <span className="text-white text-lg  flex justify-start px-20 pt-7 text-opacity-80">
+          <span className="text-white text-sm md:text-lg  flex justify-start px-5 md:px-20 pt-7 text-opacity-80">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco{" "}
           </span>
 
-          <div className="flex flex-row text-white justify-center py-7 gap-5">
+          <div className="flex flex-col md:flex-row text-white justify-center py-7 gap-5">
             <span className="border-2 p-2">ATTEND SERVICE</span>
             <span className="border-2 p-2">COME WITH US</span>
           </div>
@@ -39,7 +61,7 @@ const Homepage = () => {
             {" "}
             JOIN US{" "}
           </span>
-          <div className="flex justify-between pt-20 pb-32 px-72">
+          <div className="flex flex-col md:flex-row justify-between pt-20 pb-32 gap-5 md:px-72">
             <div className="flex flex-col text-sm justify-center items-center">
               <BiTime size={50} />
               <span className="font-bold text-xl pt-5">IN PERSON</span>
@@ -68,7 +90,7 @@ const Homepage = () => {
         <span className="border-b-4  border-black text-3xl font-bold pt-10 pb-5">
           MUSIC & PODCASTS
         </span>
-        <div className="flex justify-center  gap-52">
+        <div className="flex md:flex-row flex-col justify-center gap-5 md:gap-52">
           <div className="flex flex-col justify-center items-center gap-5">
             <span className="bg-black h-40 w-40 rounded-full flex justify-center items-center text-white">
               HOPE YARN
@@ -91,12 +113,12 @@ const Homepage = () => {
       </div>
       <div
         id="youth"
-        className="bg-youth w-full h-screen bg-cover bg-center flex flex-col justify-start items-center"
+        className="bg-youth w-full md:h-screen bg-cover bg-center flex flex-col pb-10 justify-start items-center"
       >
         <span className="text-white pt-20 text-3xl font-bold border-b-4 pb-5 border-black">
           KIDS AND YOUTH
         </span>
-        <div className="flex pt-20 gap-64 justify-center ">
+        <div className="flex md:flex-row flex-col pt-20 gap-5 md:gap-64 justify-center ">
           <div className="flex flex-col justify-center items-center gap-10">
             <span className="bg-black w-40 h-40 rounded-full  text-white flex justify-center items-center">
               HOPE KIDS
@@ -109,7 +131,7 @@ const Homepage = () => {
             <span className="bg-black w-40 h-40 rounded-full text-white flex justify-center items-center">
               YOUTH FOR NEW GENERATIONS
             </span>
-            <span className="font-bold text-xl border-4 p-2 border-black">
+            <span className="font-bold text-xl border-4 p-2 md:border-black border-white text-white md:text-black">
               MORE ABOUT YOUTH
             </span>
           </div>
@@ -125,7 +147,7 @@ const Homepage = () => {
         <span className="text-black text-3xl font-bold">FOLLOW US </span>
         <span className="text-black">FACEBOOK </span>
 
-        <span className="text-black text-xl font-bold text-opacity-90 border-2 border-black py-2 px-4">
+        <span className="text-black md:text-xl font-bold text-opacity-90 border-2 border-black py-2 px-4">
           @JESUS CHRIST HOPE OFF ALL GENERATIONS, INC. MINISTRY
         </span>
       </div>

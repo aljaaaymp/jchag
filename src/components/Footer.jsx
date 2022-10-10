@@ -14,7 +14,7 @@ import { GoLocation } from "react-icons/go";
 const Footer = () => {
   return (
     <div className=" h-auto bg-black flex flex-col py-20">
-      <div className="flex justify-around items-start px-20">
+      <div className="flex md:flex-row flex-col md:justify-around justify-center items-center md:items-start gap-5 px-20">
         <div className="flex flex-col text-white gap-2 justify-center items-center">
           <AiOutlineMail size={40} />
           <span className="font-bold text-xl">EMAIL</span>
