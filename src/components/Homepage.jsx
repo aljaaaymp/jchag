@@ -1,52 +1,22 @@
 import React from 'react'
 import { BiTime } from "react-icons/bi";
-import { AiOutlineBars } from "react-icons/ai";
-import { useState } from 'react';
 
 function Homepage() {
-    const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <div className="flex flex-col w-auto h-auto" id="container">
-      <div id="hero" className="w-fit h-screen bg-hero bg-cover flex flex-col">
-        <div
-          id="navbar"
-          className="flex flex-col md:flex-row text-white justify-start md:justify-between px-10 py-7 font-bold"
-        >
-          <span className="text-3xl"> JCHAGM. </span>
-          <button
-            className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-            type="button"
-            onClick={() => setNavbarOpen(!navbarOpen)}
-          >
-            <i className="fas fa-bars">
-              <AiOutlineBars className='text-white'/>
-            </i>
-          </button>
-          <div
-            className={
-              "md:flex  flex-col md:flex-row items-start md:items-center justify-center  pr-8 md:pr-0" +
-              (navbarOpen ? " flex" : " hidden")
-            }
-            id="example-navbar-danger"
-          >
-            <div/>
-            <div className="flex gap-11 flex-col md:flex-row">
-              <span> WATCH </span>
-              <span> ABOUT </span>
-              <span> OUTREACH </span>
-              <span> GIVE </span>
-            </div>
-          </div>
-        </div>
-        <div className="pt-10 flex flex-col px-20 md:w-1/2">
-          <span className="text-white text-3xl md:text-6xl font-bold">
+      <div
+        id="hero"
+        className="w-full h-screen  bg-hero bg-cover flex flex-col pt-20 mt-10"
+      >
+        <div className="pt-10 flex flex-col px-20 md:w-full xl:w-1/2">
+          <span className="text-white text-3xl md:text-6xl font-bold  ">
             THE PERFECT PLACE FOR IMPERFECT PEOPLE
           </span>
           <span className="text-white text-sm md:text-lg  flex justify-start px-5 md:px-20 pt-7 text-opacity-80">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco{" "}
+            ad minim veniam, quis nostrud exercitation ullamco
           </span>
 
           <div className="flex flex-col md:flex-row text-white justify-center py-7 gap-5">
@@ -61,8 +31,8 @@ function Homepage() {
             {" "}
             JOIN US{" "}
           </span>
-          <div className="flex flex-col md:flex-row justify-between pt-20 pb-32 gap-5 md:px-72">
-            <div className="flex flex-col text-sm justify-center items-center">
+          <div className="flex flex-col  md:flex-row justify-around w-full md:w-screen gap-5 md:gap-40 pt-20 flex-wrap pb-32 md:px-72">
+            <div className="flex flex-col text-sm justify-center items-center ">
               <BiTime size={50} />
               <span className="font-bold text-xl pt-5">IN PERSON</span>
               <span className="text-sm font-semibold pt-5">SUNDAY</span>
@@ -84,8 +54,11 @@ function Homepage() {
         </div>
       </div>
       <div className="w-auto bg-gray-100 h-auto flex flex-col justify-start items-center pt-20 pb-32 gap-5">
-        <span className="font-bold text-3xl"> MISSED A RECENT MESSAGE? </span>
-        <span className="border-2 border-black p-2"> WATCH ON FACEBOOK </span>
+        <span className="font-bold text-3xl "> MISSED A RECENT MESSAGE? </span>
+        <span className="border-2 border-black p-2 hover:bg-black hover:text-white">
+          {" "}
+          WATCH ON FACEBOOK{" "}
+        </span>
         <span className="bg-black w-1/3 h-80"> LINK </span>
         <span className="border-b-4  border-black text-3xl font-bold pt-10 pb-5">
           MUSIC & PODCASTS
@@ -96,7 +69,7 @@ function Homepage() {
               HOPE YARN
             </span>
             <span className="font-bold text-xl"> HOPE WORSHIP </span>
-            <span className="font-bold border-2 border-black p-2">
+            <span className="font-bold border-2 border-black p-2 hover:bg-black hover:text-white">
               LISTEN ON SPOTIFY
             </span>
           </div>
@@ -105,7 +78,7 @@ function Homepage() {
               HOPE YARN
             </span>
             <span className="font-bold text-xl"> SPOTIFY </span>
-            <span className="font-bold border-2 border-black p-2">
+            <span className="font-bold border-2 border-black p-2 hover:bg-black hover:text-white">
               LISTEN ON APPLE PODCASTS
             </span>
           </div>
@@ -123,7 +96,7 @@ function Homepage() {
             <span className="bg-black w-40 h-40 rounded-full  text-white flex justify-center items-center">
               HOPE KIDS
             </span>
-            <span className="font-bold text-xl border-4 p-2 border-black">
+            <span className="font-bold text-xl border-4 p-2 border-black hover:bg-black hover:text-white">
               MORE ABOUT KIDS
             </span>
           </div>
@@ -131,7 +104,7 @@ function Homepage() {
             <span className="bg-black w-40 h-40 rounded-full text-white flex justify-center items-center">
               YOUTH FOR NEW GENERATIONS
             </span>
-            <span className="font-bold text-xl border-4 p-2 md:border-black border-white text-white md:text-black">
+            <span className="font-bold text-xl border-4 p-2 md:border-black border-white text-white md:text-black hover:bg-black  hover:border-black hover:text-white ">
               MORE ABOUT YOUTH
             </span>
           </div>
@@ -139,15 +112,15 @@ function Homepage() {
       </div>
       <div className="flex bg-black h-auto py-40 gap-10 justify-center items-center flex-col">
         <span className="text-white text-3xl font-bold">GIVE</span>
-        <span className="text-white text-xl font-bold text-opacity-90 border -4 border-white py-2 px-4">
+        <span className="text-white text-xl font-bold text-opacity-90 border -4 border-white py-2 px-4 hover:bg-white hover:text-black">
           FIND OUT MORE
         </span>
       </div>
-      <div className="flex bg-white  h-auto py-40 gap-10 justify-center items-center flex-col">
+      <div className="flex bg-white  h-auto py-40 gap-10 justify-center items-center flex-col px-10">
         <span className="text-black text-3xl font-bold">FOLLOW US </span>
         <span className="text-black">FACEBOOK </span>
 
-        <span className="text-black md:text-xl font-bold text-opacity-90 border-2 border-black py-2 px-4">
+        <span className="text-black md:text-xl font-bold text-opacity-90 border-2 border-black py-2 px-4 hover:bg-black hover:text-white ">
           @JESUS CHRIST HOPE OFF ALL GENERATIONS, INC. MINISTRY
         </span>
       </div>
