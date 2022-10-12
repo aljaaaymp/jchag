@@ -4,8 +4,9 @@ import Homepage from './components/Homepage';
 import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Navbar from './components/Navbar';
 import History from './components/History';
+import ReactDOM from "react-dom/client";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
@@ -20,4 +21,5 @@ function App() {
   );
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
