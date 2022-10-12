@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/jchag" element={<Homepage />} />
           <Route path="/history" element={<History />} />
         </Routes>
       </BrowserRouter>
