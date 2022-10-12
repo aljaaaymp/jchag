@@ -15,7 +15,7 @@ function Navbar() {
           : "flex md:flex-row text-white  justify-between px-10 py-7 font-bold")
       }
     >
-      <Link to="/jchag">
+      <Link to="/">
         <span className="text-3xl"> JCHAGM. </span>
       </Link>
       <div className="flex flex-row-reverse  items-start pr-5 ">
