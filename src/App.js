@@ -8,13 +8,13 @@ import History from './components/History';
 export default function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/history" element={<History />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
     </div>
   );
