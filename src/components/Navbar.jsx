@@ -25,7 +25,7 @@ function Navbar() {
           : "flex md:flex-row text-white items-center justify-between px-10  font-bold")
       }
     >
-      <Link to="/" onClick={() => setNavbarOpen(!navbarOpen)}>
+      <Link to="/" onClick={() => setNavbarOpen(false)}>
         <span className="text-3xl m-0"> JCHAGM. </span>
       </Link>
       <div className="flex flex-row-reverse  items-start pr-5 ">
@@ -75,21 +75,21 @@ function Navbar() {
                 <Link
                   className="hover:bg-gray-200 hover:cursor-pointer"
                   to="/history"
-                  onClick={() => setNavbarOpen(!navbarOpen)}
+                  onClick={() => setNavbarOpen(false)}
                 >
                   History
                 </Link>
                 <Link
                   className="hover:bg-gray-200 hover:cursor-pointer"
                   to="/mission&vision"
-                  onClick={() => setNavbarOpen(!navbarOpen)}
+                  onClick={() => setNavbarOpen(false)}
                 >
                   Mission & Vision
                 </Link>
                 <Link
                   className="hover:bg-gray-200 hover:cursor-pointer"
                   to="/ministries"
-                  onClick={() => setNavbarOpen(!navbarOpen)}
+                  onClick={() => setNavbarOpen(false)}
                 >
                   Ministries
                 </Link>
