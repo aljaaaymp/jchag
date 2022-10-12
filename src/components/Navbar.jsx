@@ -55,7 +55,7 @@ function Navbar() {
                   className="hover:bg-gray-200 hover:cursor-pointer"
                   href="https://www.facebook.com/JCHAGM"
                   target="_blank"
-                  onClick={() => setNavbarOpen(!navbarOpen)}
+                  onClick={() => setNavbarOpen(false)}
                 >
                   Watch Online
                 </a>
