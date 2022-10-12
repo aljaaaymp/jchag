@@ -4,7 +4,6 @@ import Homepage from './components/Homepage';
 import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Navbar from './components/Navbar';
 import History from './components/History';
-import ReactDOM from "react-dom/client";
 
 export default function App() {
   return (
@@ -21,5 +20,4 @@ export default function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+
