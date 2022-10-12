@@ -128,7 +128,7 @@ function Homepage() {
         <span className="text-black">FACEBOOK </span>
 
         <span className="text-black md:text-xl font-bold text-opacity-90 border-2 border-black py-2 px-4 hover:bg-black hover:text-white ">
-          @JESUS CHRIST HOPE OFF ALL GENERATIONS, INC. MINISTRY
+          @JESUS CHRIST HOPE OF ALL GENERATIONS, INC. MINISTRY
         </span>
       </div>
     </div>
