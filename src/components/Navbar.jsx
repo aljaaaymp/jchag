@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineBars } from "react-icons/ai";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -14,9 +15,9 @@ function Navbar() {
           : "flex md:flex-row text-white  justify-between px-10 py-7 font-bold")
       }
     >
-      <a href="/jchag">
+      <Link to="/jchag">
         <span className="text-3xl"> JCHAGM. </span>
-      </a>
+      </Link>
       <div className="flex flex-row-reverse  items-start pr-5 ">
         <button
           className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
@@ -49,13 +50,19 @@ function Navbar() {
               </div>
             </div>
             <div className="flex flex-col ">
-                <a className=" peer hover:cursor-pointer hover:opacity-30  pb-2" href="/history">
-                  ABOUT
-                </a>
+              <Link
+                className=" peer hover:cursor-pointer hover:opacity-30  pb-2"
+                to="/history"
+              >
+                ABOUT
+              </Link>
               <div className="hidden peer-hover:flex hover:flex flex-col   bg-white text-black pr-16 p-3 absolute mt-7 items-start text-sm rounded-md">
-                <a className="hover:bg-gray-200 hover:cursor-pointer" href="/history">
+                <Link
+                  className="hover:bg-gray-200 hover:cursor-pointer"
+                  href="/history"
+                >
                   History
-                </a>
+                </Link>
                 <a className="hover:bg-gray-200 hover:cursor-pointer">
                   Mission & Vision
                 </a>
