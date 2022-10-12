@@ -1,13 +1,23 @@
 import React from "react";
 import { AiOutlineBars } from "react-icons/ai";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+ 
+  
   const [navbarOpen, setNavbarOpen] = useState(false);
+  
+  useEffect(() => {
+    if (!navbarOpen) {
+      document.getElementById("close-button").click();
+    }
+  }, [navbarOpen])
+  
+
   return (
     <div
-      id="navbar"
+      id="close-button"
       className={
         "flex md:flex-row text-white  justify-between px-10 md:py-7 py-5  font-bold bg-black fixed w-full  " +
         (navbarOpen
@@ -15,7 +25,7 @@ function Navbar() {
           : "flex md:flex-row text-white items-center justify-between px-10  font-bold")
       }
     >
-      <Link to="/">
+      <Link to="/" onClick={() => setNavbarOpen(!navbarOpen)}>
         <span className="text-3xl m-0"> JCHAGM. </span>
       </Link>
       <div className="flex flex-row-reverse  items-start pr-5 ">
@@ -41,7 +51,12 @@ function Navbar() {
                 WATCH
               </span>
               <div className="hidden peer-hover:flex hover:flex flex-col gap-2  bg-white text-black pr-16 p-3 absolute mt-7 items-start text-sm rounded-md">
-                <a className="hover:bg-gray-200 hover:cursor-pointer" href="https://www.facebook.com/JCHAGM" target="_blank">
+                <a
+                  className="hover:bg-gray-200 hover:cursor-pointer"
+                  href="https://www.facebook.com/JCHAGM"
+                  target="_blank"
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                >
                   Watch Online
                 </a>
                 <a className="hover:bg-gray-200 hover:cursor-pointer">
@@ -60,16 +75,22 @@ function Navbar() {
                 <Link
                   className="hover:bg-gray-200 hover:cursor-pointer"
                   to="/history"
+                  onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                   History
                 </Link>
                 <Link
                   className="hover:bg-gray-200 hover:cursor-pointer"
                   to="/mission&vision"
+                  onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                   Mission & Vision
                 </Link>
-                <Link className="hover:bg-gray-200 hover:cursor-pointer" to="/ministries">
+                <Link
+                  className="hover:bg-gray-200 hover:cursor-pointer"
+                  to="/ministries"
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                >
                   Ministries
                 </Link>
               </div>
