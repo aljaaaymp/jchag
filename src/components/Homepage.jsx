@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BiTime } from "react-icons/bi";
 
 function Homepage() {
+
+    useEffect(() => {
+    document.title = 'JCHAGM | Home' 
+    window.scrollTo(0, 0);
+
+  }, [])
+
 
   return (
     <div className="flex flex-col w-auto h-auto" id="container">
       <div
         id="hero"
-        className="w-full h-screen  bg-hero bg-cover flex flex-col pt-20 mt-10"
+        className="w-full h-screen  bg-hero bg-cover bg-fixed flex flex-col pt-20 mt-10"
       >
         <div className="pt-10 flex flex-col px-20 md:w-full xl:w-1/2">
           <span className="text-white text-3xl md:text-6xl font-bold  ">
@@ -86,7 +93,7 @@ function Homepage() {
       </div>
       <div
         id="youth"
-        className="bg-youth w-full md:h-screen bg-cover bg-center flex flex-col pb-10 justify-start items-center"
+        className="bg-youth w-full md:h-screen bg-cover bg-center  flex flex-col pb-10 justify-start items-center"
       >
         <span className="text-white pt-20 text-3xl font-bold border-b-4 pb-5 border-black">
           KIDS AND YOUTH

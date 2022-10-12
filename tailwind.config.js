@@ -10,12 +10,16 @@ module.exports = {
         },
       },
       animation: {
-        "fill": "fill 2s ease 0s 1 normal forwards",
+        fill: "fill 2s ease 0s 1 normal forwards",
       },
       backgroundImage: {
         hero: "url('../src/images/hope.jpg')",
         youth: "url('../src/images/youth.jfif')",
         history: "url('../src/images/history.webp')",
+        mission: "url('../src/images/mission.png')",
+        ministry: "url('../src/images/ministry.jpg')",
+        worshipTeam: "url('../src/images/worshipteam.png')",
+        usherTeam: "url('../src/images/usher.png')",
       },
     },
   },

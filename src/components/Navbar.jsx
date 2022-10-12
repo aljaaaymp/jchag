@@ -9,14 +9,14 @@ function Navbar() {
     <div
       id="navbar"
       className={
-        "flex md:flex-row text-white  justify-between px-10 py-7 font-bold bg-black fixed w-full  " +
+        "flex md:flex-row text-white  justify-between px-10 md:py-7 py-5  font-bold bg-black fixed w-full  " +
         (navbarOpen
           ? "text-white bg-black bg-opacity-80 justify-start items-start fixed  w-screen h-screen"
-          : "flex md:flex-row text-white  justify-between px-10 py-7 font-bold")
+          : "flex md:flex-row text-white items-center justify-between px-10  font-bold")
       }
     >
       <Link to="/">
-        <span className="text-3xl"> JCHAGM. </span>
+        <span className="text-3xl m-0"> JCHAGM. </span>
       </Link>
       <div className="flex flex-row-reverse  items-start pr-5 ">
         <button
@@ -31,7 +31,7 @@ function Navbar() {
         <div
           className={
             "md:flex  flex-col md:flex-row items-start md:items-center justify-center" +
-            (navbarOpen ? " flex pt-10 pr-52" : " hidden")
+            (navbarOpen ? " flex pt-10 pr-36" : " hidden")
           }
         >
           <div />
@@ -40,8 +40,8 @@ function Navbar() {
               <span className=" peer hover:cursor-pointer hover:opacity-30  pb-2">
                 WATCH
               </span>
-              <div className="hidden peer-hover:flex hover:flex flex-col   bg-white text-black pr-16 p-3 absolute mt-7 items-start text-sm rounded-md">
-                <a className="hover:bg-gray-200 hover:cursor-pointer">
+              <div className="hidden peer-hover:flex hover:flex flex-col gap-2  bg-white text-black pr-16 p-3 absolute mt-7 items-start text-sm rounded-md">
+                <a className="hover:bg-gray-200 hover:cursor-pointer" href="https://www.facebook.com/JCHAGM" target="_blank">
                   Watch Online
                 </a>
                 <a className="hover:bg-gray-200 hover:cursor-pointer">
@@ -56,19 +56,22 @@ function Navbar() {
               >
                 ABOUT
               </Link>
-              <div className="hidden peer-hover:flex hover:flex flex-col   bg-white text-black pr-16 p-3 absolute mt-7 items-start text-sm rounded-md">
+              <div className="hidden peer-hover:flex hover:flex flex-col gap-2  bg-white text-black pr-16 p-3 absolute mt-7 items-start text-sm rounded-md">
                 <Link
                   className="hover:bg-gray-200 hover:cursor-pointer"
                   to="/history"
                 >
                   History
                 </Link>
-                <a className="hover:bg-gray-200 hover:cursor-pointer">
+                <Link
+                  className="hover:bg-gray-200 hover:cursor-pointer"
+                  to="/mission&vision"
+                >
                   Mission & Vision
-                </a>
-                <a className="hover:bg-gray-200 hover:cursor-pointer">
+                </Link>
+                <Link className="hover:bg-gray-200 hover:cursor-pointer" to="/ministries">
                   Ministries
-                </a>
+                </Link>
               </div>
             </div>
             <span> SERVICES </span>
