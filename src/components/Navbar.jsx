@@ -59,7 +59,7 @@ function Navbar() {
               <div className="hidden peer-hover:flex hover:flex flex-col   bg-white text-black pr-16 p-3 absolute mt-7 items-start text-sm rounded-md">
                 <Link
                   className="hover:bg-gray-200 hover:cursor-pointer"
-                  href="/history"
+                  to="/history"
                 >
                   History
                 </Link>
