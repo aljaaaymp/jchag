@@ -31,7 +31,7 @@ function Navbar() {
         <div
           className={
             "md:flex  flex-col md:flex-row items-start md:items-center justify-center" +
-            (navbarOpen ? " flex pt-10 pr-36" : " hidden")
+            (navbarOpen ? " flex pt-10 pr-28" : " hidden")
           }
         >
           <div />
