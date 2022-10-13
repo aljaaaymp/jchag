@@ -1,11 +1,47 @@
 import React, { useEffect } from 'react'
 import { BiTime } from "react-icons/bi";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+
+
+const boxVariant = {
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.7 } },
+  hidden: { opacity: 0, scale: 0 },
+};
+
 
 function Homepage() {
 
+  
+  
+
+   const control = useAnimation();
+   
+   const [ref, inView] = useInView();
+
+   if (inView) {
+     control.start({
+       x: 0,
+       transition: {
+         delay: 0.8,
+       },
+     });
+   } else {
+     control.start("hidden");
+   }
+
+     useEffect(() => {
+       if (inView) {
+         control.start("visible");
+       } else {
+         control.start("hidden");
+       }
+     }, [control, inView]);
+     
     useEffect(() => {
     document.title = 'JCHAGM | Home' 
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
   }, [])
 
@@ -27,8 +63,18 @@ function Homepage() {
           </span>
 
           <div className="flex flex-col md:flex-row text-white justify-center py-7 gap-5">
-            <span className="border-2 p-2">ATTEND SERVICE</span>
-            <span className="border-2 p-2">COME WITH US</span>
+            <button className="p-2 border-2 border-white btn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
+              <span className="w-0 h-0  bg-white absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
+              <span className="w-full  text-white transition-colors duration-500 ease-in-out group-hover:text-black z-10">
+                ATTEND SERVICE
+              </span>
+            </button>
+            <button className="p-2 border-2 border-white btn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
+              <span className="w-0 h-0  bg-white absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
+              <span className="w-full  text-white transition-colors duration-500 ease-in-out group-hover:text-black z-10">
+                COME WITH US
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -38,34 +84,72 @@ function Homepage() {
             {" "}
             JOIN US{" "}
           </span>
+
           <div className="flex flex-col  md:flex-row justify-around w-full md:w-screen gap-5 md:gap-40 pt-20 flex-wrap pb-32 md:px-72">
-            <div className="flex flex-col text-sm justify-center items-center ">
-              <BiTime size={50} />
-              <span className="font-bold text-xl pt-5">IN PERSON</span>
-              <span className="text-sm font-semibold pt-5">SUNDAY</span>
-              <span className="pt-5">9:00am - 11:00am</span>
-              <span className="text-opacity-60 text-black text-xs pt-2">
-                JCHAGM Church
-              </span>
-            </div>
-            <div className="flex flex-col text-sm justify-center items-center">
-              <BiTime size={50} />
-              <span className="font-bold text-xl pt-5">ONLINE</span>
-              <span className="text-sm font-semibold pt-5">SUNDAY</span>
-              <span className="pt-5">9:00am - 11:00am</span>
-              <span className="text-opacity-60 text-black text-xs pt-2">
-                Online Only
-              </span>
-            </div>
+            <motion.div
+              className="box"
+              ref={ref}
+              variants={boxVariant}
+              initial="hidden"
+              animate={control}
+            >
+              <div className="flex flex-col text-sm justify-center items-center ">
+                <BiTime size={50} />
+                <span className="font-bold text-xl pt-5">IN PERSON</span>
+                <span className="text-sm font-semibold pt-5">SUNDAY</span>
+                <span className="pt-5">9:00am - 11:00am</span>
+                <span className="text-opacity-60 text-black text-xs pt-2">
+                  JCHAGM Church
+                </span>
+              </div>
+            </motion.div>
+            <motion.div
+              className="box"
+              ref={ref}
+              variants={boxVariant}
+              initial="hidden"
+              animate={control}
+            >
+              <div className="flex flex-col text-sm justify-center items-center">
+                <BiTime size={50} />
+                <span className="font-bold text-xl pt-5">ONLINE</span>
+                <span className="text-sm font-semibold pt-5">SUNDAY</span>
+                <span className="pt-5">9:00am - 11:00am</span>
+                <span className="text-opacity-60 text-black text-xs pt-2">
+                  Online Only
+                </span>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
       <div className="w-auto bg-gray-100 h-auto flex flex-col justify-start items-center pt-20 pb-32 gap-5">
-        <span className="font-bold text-3xl "> MISSED A RECENT MESSAGE? </span>
-        <span className="border-2 border-black p-2 hover:bg-black hover:text-white">
-          {" "}
-          WATCH ON FACEBOOK{" "}
-        </span>
+        <motion.div
+          initial={{
+            x: "100vw",
+          }}
+          animate={control}
+          className="box"
+        >
+          <span className="font-bold text-3xl ">MISSED A RECENT MESSAGE?</span>
+        </motion.div>
+        <motion.div
+          initial={{
+            x: "200vw",
+          }}
+          animate={control}
+        >
+          <a href="https://www.facebook.com/JCHAGM" target="_blank">
+            <button className="p-2 border-2 border-black btn relative inline-flex items-center justify-start overflow-hidden transition-all  rounded  group">
+              <span className="w-0 h-0  bg-black absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
+
+              <span className="w-full text-black transition-colors duration-500 ease-in-out group-hover:text-white z-10">
+                WATCH ON FACEBOOK
+              </span>
+            </button>
+          </a>
+        </motion.div>
+
         <span className="bg-black w-1/3 h-80"> LINK </span>
         <span className="border-b-4  border-black text-3xl font-bold pt-10 pb-5">
           MUSIC & PODCASTS
@@ -76,18 +160,24 @@ function Homepage() {
               HOPE YARN
             </span>
             <span className="font-bold text-xl"> HOPE WORSHIP </span>
-            <span className="font-bold border-2 border-black p-2 hover:bg-black hover:text-white">
-              LISTEN ON SPOTIFY
-            </span>
+            <button className="p-2 border-2 border-black btn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
+              <span className="w-0 h-0  bg-black absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
+              <span className="w-full text-black font-bold transition-colors duration-500 ease-in-out group-hover:text-white z-10">
+                LISTEN ON SPOTIFY
+              </span>
+            </button>
           </div>
           <div className="flex flex-col justify-center items-center gap-5">
             <span className="bg-black h-40 w-40 rounded-full flex justify-center items-center text-white">
               HOPE YARN
             </span>
             <span className="font-bold text-xl"> SPOTIFY </span>
-            <span className="font-bold border-2 border-black p-2 hover:bg-black hover:text-white">
-              LISTEN ON APPLE PODCASTS
-            </span>
+            <button className="p-2 border-2 border-black btn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
+              <span className="w-0 h-0  bg-black absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
+              <span className="w-full text-black font-bold transition-colors duration-500 ease-in-out group-hover:text-white z-10">
+                LISTEN ON APPLE PODCASTS
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -103,33 +193,46 @@ function Homepage() {
             <span className="bg-black w-40 h-40 rounded-full  text-white flex justify-center items-center">
               HOPE KIDS
             </span>
-            <span className="font-bold text-xl border-4 p-2 border-black hover:bg-black hover:text-white">
-              MORE ABOUT KIDS
-            </span>
+            <button className="p-2 border-4 border-black btn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
+              <span className="w-0 h-0  bg-black absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
+              <span className="w-full text-xl  text-black font-bold transition-colors duration-500 ease-in-out group-hover:text-white z-10">
+                MORE ABOUT KIDS
+              </span>
+            </button>
           </div>
           <div className="flex flex-col justify-center items-center gap-10">
             <span className="bg-black w-40 h-40 rounded-full text-white flex justify-center items-center">
               YOUTH FOR NEW GENERATIONS
             </span>
-            <span className="font-bold text-xl border-4 p-2 md:border-black border-white text-white md:text-black hover:bg-black  hover:border-black hover:text-white ">
-              MORE ABOUT YOUTH
-            </span>
+            <button className="p-2 border-4 md:border-black  border-whitebtn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
+              <span className="w-0 h-0  bg-black absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
+              <span className="w-full text-xl text-white md:text-black font-bold transition-colors duration-500 ease-in-out group-hover:text-white z-10">
+                MORE ABOUT YOUTH
+              </span>
+            </button>
           </div>
         </div>
       </div>
       <div className="flex bg-black h-auto py-40 gap-10 justify-center items-center flex-col">
         <span className="text-white text-3xl font-bold">GIVE</span>
-        <span className="text-white text-xl font-bold text-opacity-90 border -4 border-white py-2 px-4 hover:bg-white hover:text-black">
-          FIND OUT MORE
-        </span>
+        <button className="p-2 border-4 border-white btn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
+          <span className="w-0 h-0  bg-white absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
+          <span className="w-full text-xl  text-white font-bold transition-colors duration-500 ease-in-out group-hover:text-black z-10">
+            FIND OUT MORE
+          </span>
+        </button>
       </div>
       <div className="flex bg-white  h-auto py-40 gap-10 justify-center items-center flex-col px-10">
         <span className="text-black text-3xl font-bold">FOLLOW US </span>
         <span className="text-black">FACEBOOK </span>
-
-        <span className="text-black md:text-xl font-bold text-opacity-90 border-2 border-black py-2 px-4 hover:bg-black hover:text-white ">
-          @JESUS CHRIST HOPE OF ALL GENERATIONS, INC. MINISTRY
-        </span>
+        <a href="https://www.facebook.com/JCHAGM" target="_blank">
+          <button className="p-2 border-2 px-4 md:border-black  border-whitebtn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
+            <span className="w-0 h-0  bg-black absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
+            <span className="w-full text-xl text-white md:text-black font-bold transition-colors duration-500 ease-in-out group-hover:text-white z-10">
+              @JESUS CHRIST HOPE OF ALL GENERATIONS, INC. MINISTRY
+            </span>
+          </button>
+        </a>
       </div>
     </div>
   );

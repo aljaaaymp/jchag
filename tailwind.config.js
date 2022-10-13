@@ -8,8 +8,13 @@ module.exports = {
           "0%": { opacity: "0", transform: "translateX(-500px)" },
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
+        leftToRight: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(130px)" },
+        },
       },
       animation: {
+        "left-to-right": "leftToRight 3s ease-in-out infinite",
         fill: "fill 2s ease 0s 1 normal forwards",
       },
       backgroundImage: {
@@ -20,6 +25,7 @@ module.exports = {
         ministry: "url('../src/images/ministry.jpg')",
         worshipTeam: "url('../src/images/worshipteam.png')",
         usherTeam: "url('../src/images/usher.png')",
+      
       },
     },
   },
