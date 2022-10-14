@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.f4a99c5e.css",
-    "main.js": "/static/js/main.27b0ebc3.js",
+    "main.css": "/static/css/main.e5b8963b.css",
+    "main.js": "/static/js/main.8f505d6a.js",
     "static/js/787.2ea513bc.chunk.js": "/static/js/787.2ea513bc.chunk.js",
-    "static/media/worshipteam.png": "/static/media/worshipteam.2522ed060be3b180200d.png",
     "static/media/usher.png": "/static/media/usher.87d181864b8698c0ee30.png",
     "static/media/hopeworship.PNG": "/static/media/hopeworship.7445077f5ed5ab725bcb.PNG",
     "static/media/ministry.jpg": "/static/media/ministry.3751b647cfe4bedd8be5.jpg",
     "static/media/mission.png": "/static/media/mission.f70a34fc8b99446f8ba6.png",
+    "static/media/worshipteam.png": "/static/media/worshipteam.23cd71e2445307fc15ac.png",
     "static/media/hope.jpg": "/static/media/hope.b2cb571a73bc232189ff.jpg",
     "static/media/facebook.jpg": "/static/media/facebook.0580b10f2993513cad39.jpg",
     "static/media/services.jpg": "/static/media/services.351063490be223c2b81a.jpg",
@@ -15,12 +15,12 @@
     "static/media/youth.jfif": "/static/media/youth.1747196287faa1afe3ba.jfif",
     "static/media/history.webp": "/static/media/history.5baf81178a1de880e8c4.webp",
     "index.html": "/index.html",
-    "main.f4a99c5e.css.map": "/static/css/main.f4a99c5e.css.map",
-    "main.27b0ebc3.js.map": "/static/js/main.27b0ebc3.js.map",
+    "main.e5b8963b.css.map": "/static/css/main.e5b8963b.css.map",
+    "main.8f505d6a.js.map": "/static/js/main.8f505d6a.js.map",
     "787.2ea513bc.chunk.js.map": "/static/js/787.2ea513bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4a99c5e.css",
-    "static/js/main.27b0ebc3.js"
+    "static/css/main.e5b8963b.css",
+    "static/js/main.8f505d6a.js"
   ]
 }
