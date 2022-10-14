@@ -17,8 +17,8 @@ const History = () => {
         <span className="text-black font-bold text-6xl text-opacity-90 border-b-2 border-black pb-5 ">
           FOUNDED
         </span>
-        <div className="flex justify-around flex-col md:flex-row items-center md:items-start w-full py-20  md:px-20 gap-10">
-          <span className="text-left w-1/2">
+        <div className="flex justify-around flex-col md:flex-row items-center md:items-start w-full py-20 px-10 md:px-20 gap-10">
+          <span className="text-left md:w-1/2 ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
             asperiores amet facilis nemo. Optio, pariatur tempora minus quod
             dolorum fuga, culpa soluta delectus nobis, voluptatem repellendus
@@ -73,11 +73,11 @@ const History = () => {
           </div>
         </div>
       </div>
-      <div className="text-3xl md:text-9xl bg-white font-semibold py-20 hover:text-white hover:animate-fill hover:bg-black hover:cursor-pointer">
-        <Link to="/mission&vision">
+      <Link to="/mission&vision">
+        <div className="text-3xl md:text-9xl bg-white font-semibold py-20 hover:text-white hover:animate-fill hover:bg-black hover:cursor-pointer">
           <span> MISSION & VISION</span>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </div>
   );
 }
