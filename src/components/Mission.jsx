@@ -11,7 +11,7 @@ const Mission = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col bg-mission md:bg-cover bg-center h-screen w-full" />
+      <div className="flex flex-col bg-mission  bg-cover md:bg-contain  bg-center h-screen w-full" />
 
       <div className="bg-gray-100 h-auto w-full flex flex-col py-20 justify-start items-center">
         <span className="text-black text-4xl font-bold  pb-5 border-b-2 border-black ">

@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import { BiTime } from "react-icons/bi";
+import { FaFacebookF } from "react-icons/fa";
+import { TbBrandYoutube } from "react-icons/tb";
+
+
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { AnimationOnScroll } from "react-animation-on-scroll";
-
-
+import { Link } from 'react-router-dom';
 const boxVariant = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.7 } },
   hidden: { opacity: 0, scale: 0 },
@@ -41,7 +43,7 @@ function Homepage() {
      
     useEffect(() => {
     document.title = 'JCHAGM | Home' 
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
   }, [])
 
@@ -50,7 +52,7 @@ function Homepage() {
     <div className="flex flex-col w-auto h-auto" id="container">
       <div
         id="hero"
-        className="w-full h-screen  bg-hero bg-cover bg-fixed flex flex-col pt-20 mt-10"
+        className="w-full h-screen  bg-hero bg-cover md:bg-contain bg-center bg-fixed flex flex-col pt-20 mt-10"
       >
         <div className="pt-10 flex flex-col px-20 md:w-full xl:w-1/2">
           <span className="text-white text-3xl md:text-6xl font-bold  ">
@@ -81,8 +83,7 @@ function Homepage() {
       <div className="w-auto h-auto bg-white flex flex-col">
         <div className="pt-20">
           <span className="text-black font-bold text-6xl text-opacity-90">
-            {" "}
-            JOIN US{" "}
+            JOIN US
           </span>
 
           <div className="flex flex-col  md:flex-row justify-around w-full md:w-screen gap-5 md:gap-40 pt-20 flex-wrap pb-32 md:px-72">
@@ -149,35 +150,44 @@ function Homepage() {
             </button>
           </a>
         </motion.div>
-
-        <span className="bg-black w-1/3 h-80"> LINK </span>
+        <a href="https://fb.watch/g8HKqKJFDx/" target="_blank">
+          <span className="bg-facebook bg-cover w-96 bg-center  h-80 flex justify-center items-center rounded-xl text-white">
+            <FaFacebookF
+              className="p-5 hover:bg-blue-700 bg-black bg-opacity-30 rounded-xl"
+              size={70}
+            />{" "}
+          </span>
+        </a>
         <span className="border-b-4  border-black text-3xl font-bold pt-10 pb-5">
-          MUSIC & PODCASTS
+          MUSIC
         </span>
-        <div className="flex md:flex-row flex-col justify-center gap-5 md:gap-52">
+        <div className="flex md:flex-row flex-col items-center justify-center gap-5 md:gap-52 pt-10">
           <div className="flex flex-col justify-center items-center gap-5">
-            <span className="bg-black h-40 w-40 rounded-full flex justify-center items-center text-white">
-              HOPE YARN
-            </span>
             <span className="font-bold text-xl"> HOPE WORSHIP </span>
-            <button className="p-2 border-2 border-black btn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
-              <span className="w-0 h-0  bg-black absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
-              <span className="w-full text-black font-bold transition-colors duration-500 ease-in-out group-hover:text-white z-10">
-                LISTEN ON SPOTIFY
+            <a
+              href="https://www.youtube.com/channel/UChIAcRFeye_leuSuXaoCjmA/featured"
+              target="_blank"
+            >
+              <button className="p-2 border-2 border-black btn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
+                <span className="w-0 h-0  bg-black absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
+
+                <span className="w-full text-black font-bold transition-colors duration-500 ease-in-out group-hover:text-white z-10">
+                  WATCH ON YOUTUBE
+                </span>
+              </button>
+            </a>
+
+            <a
+              href="https://www.youtube.com/watch?v=ovi_vokE7ds"
+              target="_blank"
+            >
+              <span className="bg-hopeworship bg-cover w-96 bg-center  h-80 flex justify-center items-center rounded-xl text-white">
+                <TbBrandYoutube
+                  className="p-5 hover:bg-red-700 bg-black bg-opacity-30 rounded-xl"
+                  size={80}
+                />{" "}
               </span>
-            </button>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-5">
-            <span className="bg-black h-40 w-40 rounded-full flex justify-center items-center text-white">
-              HOPE YARN
-            </span>
-            <span className="font-bold text-xl"> SPOTIFY </span>
-            <button className="p-2 border-2 border-black btn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
-              <span className="w-0 h-0  bg-black absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
-              <span className="w-full text-black font-bold transition-colors duration-500 ease-in-out group-hover:text-white z-10">
-                LISTEN ON APPLE PODCASTS
-              </span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -217,18 +227,23 @@ function Homepage() {
         <span className="text-white text-3xl font-bold">GIVE</span>
         <button className="p-2 border-4 border-white btn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
           <span className="w-0 h-0  bg-white absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
-          <span className="w-full text-xl  text-white font-bold transition-colors duration-500 ease-in-out group-hover:text-black z-10">
-            FIND OUT MORE
-          </span>
+          <Link
+            className=" peer hover:cursor-pointer hover:opacity-30  pb-2"
+            to="/tithes&offering"
+          >
+            <span className="w-full text-xl  text-white font-bold transition-colors duration-500 ease-in-out group-hover:text-black z-10">
+              FIND OUT MORE
+            </span>
+          </Link>
         </button>
       </div>
       <div className="flex bg-white  h-auto py-40 gap-10 justify-center items-center flex-col px-10">
         <span className="text-black text-3xl font-bold">FOLLOW US </span>
-        <span className="text-black">FACEBOOK </span>
+        <span className="text-black font-bold">FACEBOOK </span>
         <a href="https://www.facebook.com/JCHAGM" target="_blank">
-          <button className="p-2 border-2 px-4 md:border-black  border-whitebtn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
+          <button className="p-2 border-2 px-4 border-black btn relative inline-flex items-center justify-start overflow-hidden transition-all   group">
             <span className="w-0 h-0  bg-black absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
-            <span className="w-full text-xl text-white md:text-black font-bold transition-colors duration-500 ease-in-out group-hover:text-white z-10">
+            <span className="w-full text-xl text-black  font-bold transition-colors duration-500 ease-in-out group-hover:text-white z-10">
               @JESUS CHRIST HOPE OF ALL GENERATIONS, INC. MINISTRY
             </span>
           </button>

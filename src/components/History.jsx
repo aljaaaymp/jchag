@@ -12,7 +12,7 @@ const History = () => {
   }, []);
   return (
     <div className="flex flex-col">
-      <div className="bg-history w-full h-screen bg-cover bg-center" />
+      <div className=" bg-cover md:bg-contain bg-center bg-history w-full h-screen" />
       <div className="bg-white w-full h-auto flex flex-col pt-20 justify-start items-center">
         <span className="text-black font-bold text-6xl text-opacity-90 border-b-2 border-black pb-5 ">
           FOUNDED

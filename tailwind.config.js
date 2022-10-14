@@ -25,7 +25,10 @@ module.exports = {
         ministry: "url('../src/images/ministry.jpg')",
         worshipTeam: "url('../src/images/worshipteam.png')",
         usherTeam: "url('../src/images/usher.png')",
-      
+        services: "url('../src/images/services.jpg')",
+        facebook: "url('../src/images/facebook.jpg')",
+        tithes: "url('../src/images/tithes.jpg')",
+        hopeworship: "url('../src/images/hopeworship.PNG')",
       },
     },
   },

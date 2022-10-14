@@ -9,7 +9,7 @@ const Ushering = () => {
 
   return (
     <>
-      <div className="bg-usherTeam w-auto h-screen bg-center  bg-contain md:bg-auto  bg-fixed" />
+      <div className="bg-usherTeam w-auto h-screen  bg-fixed  bg-cover md:bg-contain bg-center" />
       <div className="bg-white h-auto w-full flex flex-col justify-start items-center px-5 md:px-20 py-20">
         <span className="text-5xl font-bold pb-5 border-b-2 border-black ">
           USHER TEAM

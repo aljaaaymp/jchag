@@ -1,5 +1,7 @@
 import React from "react";
 import { AiOutlineBars } from "react-icons/ai";
+import { BsArrowDownShort } from "react-icons/bs";
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -47,8 +49,8 @@ function Navbar() {
           <div />
           <div className="flex  gap-10  flex-col md:flex-row  ">
             <div className="flex flex-col ">
-              <span className=" peer hover:cursor-pointer hover:opacity-30  pb-2">
-                WATCH
+              <span className=" peer hover:cursor-pointer hover:opacity-30  pb-2 flex justify-center items-center">
+                WATCH <BsArrowDownShort />
               </span>
               <div className="hidden peer-hover:flex hover:flex flex-col gap-2  bg-white text-black pr-16 p-3 absolute mt-7 items-start text-sm rounded-md">
                 <a
@@ -59,17 +61,23 @@ function Navbar() {
                 >
                   Watch Online
                 </a>
-                <a className="hover:bg-gray-200 hover:cursor-pointer">
+
+                <a
+                  className="hover:bg-gray-200 hover:cursor-pointer"
+                  href="https://www.youtube.com/channel/UChIAcRFeye_leuSuXaoCjmA/videos"
+                  target="_blank"
+                  onClick={() => setNavbarOpen(false)}
+                >
                   Past Messages
                 </a>
               </div>
             </div>
-            <div className="flex flex-col ">
+            <div className="flex flex-col  ">
               <Link
-                className=" peer hover:cursor-pointer hover:opacity-30  pb-2"
+                className=" peer hover:cursor-pointer hover:opacity-30  pb-2 flex justify-center items-center"
                 to="/history"
               >
-                ABOUT
+                ABOUT <BsArrowDownShort />
               </Link>
               <div className="hidden peer-hover:flex hover:flex flex-col gap-2  bg-white text-black pr-16 p-3 absolute mt-7 items-start text-sm rounded-md">
                 <Link
@@ -95,8 +103,20 @@ function Navbar() {
                 </Link>
               </div>
             </div>
-            <span> SERVICES </span>
-            <span> GIVE </span>
+            <Link
+              className=" peer hover:cursor-pointer hover:opacity-30  pb-2"
+              to="/services"
+              onClick={() => setNavbarOpen(false)}
+            >
+              <span> SERVICES </span>
+            </Link>
+            <Link
+              className=" peer hover:cursor-pointer hover:opacity-30  pb-2"
+              to="/tithes&offering"
+              onClick={() => setNavbarOpen(false)}
+            >
+              <span> GIVE </span>
+            </Link>
           </div>
         </div>
       </div>

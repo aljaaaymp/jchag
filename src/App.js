@@ -10,6 +10,8 @@ import Worship from "./components/Worship";
 import Ushering from "./components/Ushering";
 import Mens from "./components/Mens";
 import Womens from "./components/Womens";
+import Services from "./components/Services";
+import Give from "./components/Give";
 
 export default function App() {
   return (
@@ -25,6 +27,8 @@ export default function App() {
           <Route path="/ministries/usherteam" element={<Ushering />} />
           <Route path="/ministries/mensteam" element={<Mens />} />
           <Route path="/ministries/womensteam" element={<Womens />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/tithes&offering" element={<Give />} />
         </Routes>
       </HashRouter>
       <Footer />
