@@ -19,7 +19,7 @@ export default function App() {
       <HashRouter>
         <Navbar />
         <Routes>
-          <Route path="/home" element={<Homepage />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/history" element={<History />} />
           <Route path="/mission&vision" element={<Mission />} />
           <Route path="/ministries" element={<Ministries />} />
