@@ -8,7 +8,7 @@ const Womens = () => {
 
   return (
     <>
-      <div className="bg-pink-200 w-auto h-screen  bg-contain md:bg-auto  bg-fixed" />
+      <div className="bg-pink-200 w-auto h-96 md:h-screen  bg-cover   bg-fixed" />
       <div className="bg-white h-auto w-full flex flex-col justify-start items-center px-5 md:px-20 py-20">
         <span className="text-5xl font-bold pb-5 border-b-2 border-black ">
           WOMEN'S TEAM

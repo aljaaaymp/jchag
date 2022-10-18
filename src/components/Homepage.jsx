@@ -52,7 +52,7 @@ function Homepage() {
     <div className="flex flex-col w-auto h-auto" id="container">
       <div
         id="hero"
-        className="w-full h-screen  bg-hero bg-cover md:bg-contain bg-center bg-fixed flex flex-col pt-20 mt-10"
+        className="w-full h-auto pb-20 md:h-screen  bg-hero bg-cover md:bg-contain bg-center bg-fixed flex flex-col pt-20 mt-10"
       >
         <div className="pt-10 flex flex-col px-20 md:w-full xl:w-1/2">
           <span className="text-white text-3xl md:text-6xl font-bold  ">

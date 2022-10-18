@@ -9,7 +9,7 @@ const Ministries = () => {
 
   return (
     <>
-      <img className="bg-ministry bg-cover md:bg-contain bg-center h-screen w-full" />
+      <img className="bg-ministry bg-cover  bg-center h-96 md:h-screen w-full" />
       <div className="bg-white h-auto w-full py-20 flex flex-col justify-start items-center px-20 md:px-40">
         <span className="text-5xl font-bold border-b-2 pb-5 border-black">
           MINISTRIES

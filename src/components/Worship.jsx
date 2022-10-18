@@ -8,7 +8,7 @@ const Worship = () => {
 
   return (
     <>
-      <div className="bg-worshipTeam w-auto h-screen  bg-fixed md:bg-contain bg-center" />
+      <div className="bg-worshipTeam w-auto h-96 md:h-screen bg-cover  bg-fixed  bg-center" />
       <div className="bg-white h-auto w-auto flex flex-col justify-start items-center px-5 md:px-20 py-20">
         <span className="text-5xl font-bold pb-5 border-b-2 border-black ">
           HOPE WORSHIP

@@ -11,7 +11,7 @@ const Give = () => {
 
   return (
     <>
-      <div className=" bg-cover md:bg-contain bg-center bg-tithes w-full h-screen" />
+      <div className=" bg-cover  bg-center bg-tithes h-96 w-full md:h-screen" />
       <div className="bg-white h-auto w-full flex flex-col pb-20">
         <span className="text-black text-3xl md:text-5xl pt-20 font-bold">
           LET'S GIVE BACK TO GOD!

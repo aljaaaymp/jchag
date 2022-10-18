@@ -12,7 +12,7 @@ const Services = () => {
 
   return (
     <div>
-      <div className="bg-services w-full h-screen bg-cover md:bg-contain bg-center" />
+      <div className="bg-services w-full h-96 md:h-screen bg-cover  bg-center" />
       <div className="bg-white h-auto w-full flex flex-col">
         <span className="text-black text-3xl md:text-5xl pt-20 font-bold">
           WORSHIP WITH US!
@@ -104,9 +104,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div>
-
-      </div>
+      <div></div>
     </div>
   );
 }

@@ -11,7 +11,7 @@ const Mission = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col bg-mission  bg-cover md:bg-contain  bg-center h-screen w-full" />
+      <div className="flex flex-col bg-mission  bg-cover  bg-center h-96 md:h-screen w-full" />
 
       <div className="bg-gray-100 h-auto w-full flex flex-col py-20 justify-start items-center">
         <span className="text-black text-4xl font-bold  pb-5 border-b-2 border-black ">
@@ -39,7 +39,7 @@ const Mission = () => {
             </span>
           </div>
           <div
-            className="bg-black text-white flex justify-center items-center h-auto w-full
+            className="bg-black text-white flex justify-center items-center h-96 md:h-auto w-full
           md:w-1/2"
           >
             {" "}
@@ -59,7 +59,7 @@ const Mission = () => {
         </span>
         <div className="flex flex-col md:flex-row px-5 md:px-20 gap-10 w-screen h-auto pt-20">
           <div
-            className="bg-black text-white flex justify-center items-center h-auto w-full
+            className="bg-black text-white flex justify-center items-center h-96 md:h-auto w-full
           md:w-1/2"
           >
             {" "}
