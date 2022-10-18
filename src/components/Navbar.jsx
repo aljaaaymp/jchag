@@ -27,7 +27,7 @@ function Navbar() {
           : "flex md:flex-row text-white items-center justify-between px-10  font-bold")
       }
     >
-      <Link to="/jchag" onClick={() => setNavbarOpen(false)}>
+      <Link to="/home" onClick={() => setNavbarOpen(false)}>
         <span className="text-3xl m-0"> JCHAGM. </span>
       </Link>
       <div className="flex flex-row-reverse  items-start pt-2 justify-between w-full pr-5 ">
