@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/jchag/static/css/main.6192db47.css",
-    "main.js": "/jchag/static/js/main.05991528.js",
-    "static/js/787.2ea513bc.chunk.js": "/jchag/static/js/787.2ea513bc.chunk.js",
-    "static/media/usher.png": "/jchag/static/media/usher.87d181864b8698c0ee30.png",
-    "static/media/hopeworship.PNG": "/jchag/static/media/hopeworship.7445077f5ed5ab725bcb.PNG",
-    "static/media/ministry.jpg": "/jchag/static/media/ministry.3751b647cfe4bedd8be5.jpg",
-    "static/media/mission.png": "/jchag/static/media/mission.f70a34fc8b99446f8ba6.png",
-    "static/media/worshipteam.png": "/jchag/static/media/worshipteam.23cd71e2445307fc15ac.png",
-    "static/media/hope.jpg": "/jchag/static/media/hope.b2cb571a73bc232189ff.jpg",
-    "static/media/facebook.jpg": "/jchag/static/media/facebook.0580b10f2993513cad39.jpg",
-    "static/media/services.jpg": "/jchag/static/media/services.351063490be223c2b81a.jpg",
-    "static/media/tithes.jpg": "/jchag/static/media/tithes.abb6b087df6e74f2288e.jpg",
-    "static/media/youth.jfif": "/jchag/static/media/youth.1747196287faa1afe3ba.jfif",
-    "static/media/history.webp": "/jchag/static/media/history.5baf81178a1de880e8c4.webp",
-    "index.html": "/jchag/index.html",
-    "main.6192db47.css.map": "/jchag/static/css/main.6192db47.css.map",
-    "main.05991528.js.map": "/jchag/static/js/main.05991528.js.map",
-    "787.2ea513bc.chunk.js.map": "/jchag/static/js/787.2ea513bc.chunk.js.map"
+    "main.css": "/jchag/home/static/css/main.061dd533.css",
+    "main.js": "/jchag/home/static/js/main.1344f5ef.js",
+    "static/js/787.2ea513bc.chunk.js": "/jchag/home/static/js/787.2ea513bc.chunk.js",
+    "static/media/usher.png": "/jchag/home/static/media/usher.87d181864b8698c0ee30.png",
+    "static/media/hopeworship.PNG": "/jchag/home/static/media/hopeworship.7445077f5ed5ab725bcb.PNG",
+    "static/media/ministry.jpg": "/jchag/home/static/media/ministry.3751b647cfe4bedd8be5.jpg",
+    "static/media/mission.png": "/jchag/home/static/media/mission.f70a34fc8b99446f8ba6.png",
+    "static/media/worshipteam.png": "/jchag/home/static/media/worshipteam.23cd71e2445307fc15ac.png",
+    "static/media/hope.jpg": "/jchag/home/static/media/hope.b2cb571a73bc232189ff.jpg",
+    "static/media/facebook.jpg": "/jchag/home/static/media/facebook.0580b10f2993513cad39.jpg",
+    "static/media/services.jpg": "/jchag/home/static/media/services.351063490be223c2b81a.jpg",
+    "static/media/tithes.jpg": "/jchag/home/static/media/tithes.abb6b087df6e74f2288e.jpg",
+    "static/media/youth.jfif": "/jchag/home/static/media/youth.1747196287faa1afe3ba.jfif",
+    "static/media/history.webp": "/jchag/home/static/media/history.5baf81178a1de880e8c4.webp",
+    "index.html": "/jchag/home/index.html",
+    "main.061dd533.css.map": "/jchag/home/static/css/main.061dd533.css.map",
+    "main.1344f5ef.js.map": "/jchag/home/static/js/main.1344f5ef.js.map",
+    "787.2ea513bc.chunk.js.map": "/jchag/home/static/js/787.2ea513bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6192db47.css",
-    "static/js/main.05991528.js"
+    "static/css/main.061dd533.css",
+    "static/js/main.1344f5ef.js"
   ]
 }
